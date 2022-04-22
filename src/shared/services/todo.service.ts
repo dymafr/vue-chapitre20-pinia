@@ -2,7 +2,7 @@ import type { Todo } from "../interfaces/todo.interface";
 
 const BASE_URL = 'https://restapi.fr/api/vue3todos';
 
-export async function fetchTodo(): Promise<Todo[]> {
+export async function fetchTodo(): Promise<Todo[] | Todo> {
     return await (await fetch(BASE_URL)).json();
 }
 
